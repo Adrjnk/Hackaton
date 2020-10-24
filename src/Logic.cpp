@@ -27,7 +27,7 @@ Logic::Logic()  {
  setDriverDef(Garzewawiak);
 
  jeden.to ="Jana Pawła II";
- jeden.from = "Placc Grunwaldzki";
+ jeden.from = "Plac Grunwaldzki";
  setTripDef(jeden);
 
  dwa.from = "Traugutta";
