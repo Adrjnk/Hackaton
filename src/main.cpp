@@ -1,6 +1,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include <LogicSFML.hpp>
+#include <MainScreen.hpp>
 
 int main(){
     srand( static_cast<unsigned int>(time(nullptr)));
@@ -8,7 +9,9 @@ int main(){
     settings.antialiasingLevel = 8;
     sf::RenderWindow win(sf::VideoMode(440, 800), "Drivee",sf::Style::Default ,settings);
 
-    LogicSFML mainLogic;
+    MainScreen mainScreen;
+
+    LogicSFML mainLogic(mainScreen);
 
     while (win.isOpen()) {
         sf::Event event;

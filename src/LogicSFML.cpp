@@ -1,11 +1,11 @@
 #include "LogicSFML.hpp"
 
-LogicSFML::LogicSFML() {}
+LogicSFML::LogicSFML(MainScreen &mainScreen) :mainScreen(mainScreen){}
 
 
 
 void LogicSFML::draw(sf::RenderTarget &target, sf::RenderStates states) const {
-
+    target.draw(mainScreen,states);
 }
 
 void LogicSFML::update(){

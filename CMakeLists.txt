@@ -4,9 +4,9 @@ set(CMAKE_CXX_COMPILER "g++")
 
 set(CMAKE_CXX_FLAGS "-Wall -Wextra")
 
-if (WIN32)
-    set(CMAKE_CXX_FLAGS "-Wall -Wextra -mwindows")
-endif(WIN32)
+#if (WIN32)
+    set(CMAKE_CXX_FLAGS "-Wall -Wextra")
+#endif(WIN32)
 
 project(Drivee)
 

@@ -10,7 +10,7 @@
 class Resources {
 public:
     Resources(){
-        initFont();
+        //initFont();
         initTextures();
     }
     sf::Font font;
@@ -20,10 +20,11 @@ public:
     sf::Texture textureButtonPassengerActive;
     sf::Texture textureAppName;
 
-    ~Resources();
 private:
 
+    /*
     void initFont(){
+
         //R"(..\\..\\Resources\\Retro.ttf)" windows
         if(! font.loadFromFile("../../Resources/Retro.ttf"))
         {
@@ -31,6 +32,8 @@ private:
             abort();
         }
     }
+    */
+
     void initTextures()
     {
         if(!textureButtonDriver.loadFromFile("../../Resources/prowadze-button.png") || !textureButtonPassenger.loadFromFile("../../Resources/podrozuje-button.png") || !textureButtonPassengerActive.loadFromFile("../../Resources/podrozuje-button-klikniete.png")  || !textureButtonDriverActive.loadFromFile("../../Resources/prowadze-button-klikniete.png") ||!textureAppName.loadFromFile("../../Resources/drivee.png") )
@@ -40,9 +43,6 @@ private:
         }
     }
 };
-
-Resources::~Resources() {
-}
 
 
 #endif
