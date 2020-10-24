@@ -12,9 +12,9 @@ MainScreen::MainScreen()
 }
 
 void MainScreen::draw(sf::RenderTarget &target, sf::RenderStates states) const {
-    target.draw(appName);
-    target.draw(buttonDriver);
-    target.draw(buttonPassenger);
+    target.draw(appName,states);
+    target.draw(buttonDriver,states);
+    target.draw(buttonPassenger,states);
 
 }
 

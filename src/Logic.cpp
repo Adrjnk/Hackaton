@@ -19,8 +19,5 @@ Logic::Logic()  {
     Szymob.navX = 234234;
     Szymob.navY = 123;
     Szymob.Score = 456456564;
-
-
-
 }
 
