@@ -1,7 +1,6 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include <LogicSFML.hpp>
-#include <MainScreen.hpp>
+#include "LogicSFML.hpp"
 
 int main(){
     srand( static_cast<unsigned int>(time(nullptr)));
@@ -10,8 +9,11 @@ int main(){
     sf::RenderWindow win(sf::VideoMode(440, 800), "Drivee",sf::Style::Default ,settings);
 
     MainScreen mainScreen;
+    ChooseScreen chooseScreen;
+    TripScreen tripScreen;
+    UserScreen userScreen;
 
-    LogicSFML mainLogic(mainScreen);
+    LogicSFML mainLogic(mainScreen,chooseScreen,tripScreen,userScreen);
 
     while (win.isOpen()) {
         sf::Event event;

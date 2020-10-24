@@ -1,5 +1,15 @@
-//
-// Created by Gus on 24.10.2020.
-//
+
 
 #include "ChooseScreen.hpp"
+
+ChooseScreen::ChooseScreen() {
+
+}
+
+void ChooseScreen::draw(sf::RenderTarget &target, sf::RenderStates states) const {
+
+}
+
+ChooseScreen::~ChooseScreen() {
+
+}

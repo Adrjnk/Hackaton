@@ -7,9 +7,9 @@
 class MainScreen : public sf::Drawable{
 public:
     MainScreen();
-    virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+    void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
-    virtual ~MainScreen();
+    ~MainScreen();
 
 private:
     sf::Sprite buttonDriver;

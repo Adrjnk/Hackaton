@@ -8,7 +8,7 @@ class Logic {
     Logic();
 
 private:
-    User Szymonn;
+    User Szymon;
     User Irena;
     User Michu;
 
