@@ -10,8 +10,6 @@ public:
     std::string to="Wrocław";
     int distance=500;
     int count=30;
-    std::string home_Address;
-    std::string work_Address;
 
     int getPoints() const {
         return points;
