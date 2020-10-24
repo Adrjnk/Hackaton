@@ -10,6 +10,6 @@ void Logic::setCoord(User &user) {
 }
 
 void Logic::setScore(User &user) {
-    user.Score =+ user.getPoints;
+ //user.Score =+ user.getPoints;
 }
 
