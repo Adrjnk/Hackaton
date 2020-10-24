@@ -2,9 +2,9 @@
 
 
 Logic::Logic()  {
-    Szymon.navX = 233;
-    Szymon.Score = 666;
-    Szymon.navY = 124;
+    Szymonn.navX = 233;
+    Szymonn.Score = 666;
+    Szymonn.navY = 124;
 
     Michu.navY = 123;
     Michu.navY = 4352;
