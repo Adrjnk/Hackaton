@@ -9,18 +9,19 @@ LogicSFML::LogicSFML(MainScreen &mainScreen, ChooseScreen &chooseScreen,
 
 void LogicSFML::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 
-    target.draw(mainScreen,states);
-    target.draw(chooseScreen,states);
-    target.draw(tripScreen,states);
-    target.draw(userScreen,states);
+    //target.draw(mainScreen,states);
+    //target.draw(chooseScreen,states);
+    //target.draw(tripScreen,states);
+    //target.draw(userScreen,states);
+    target.draw(driverFound,states);
 
 }
 void LogicSFML::handleEvent(sf::Event &event, sf::RenderWindow &win) {
 
-    mainScreen.handleEvent(event,win);
-    chooseScreen.handleEvent(event,win);
-    tripScreen.handleEvent(event,win);
-    userScreen.handleEvent(event,win);
+    //mainScreen.handleEvent(event,win);
+    //chooseScreen.handleEvent(event,win);
+    //tripScreen.handleEvent(event,win);
+    //userScreen.handleEvent(event,win);
     driverFound.handleEvent(event,win);
 
 }
