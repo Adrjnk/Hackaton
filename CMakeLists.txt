@@ -8,7 +8,7 @@ if (WIN32)
     set(CMAKE_CXX_FLAGS "-Wall -Wextra -mwindows")
 endif(WIN32)
 
-project(test)
+project(Drivee)
 
 set(CMAKE_CXX_STANDARD 14)
 
