@@ -6,6 +6,9 @@
 
 class Logic {
     Logic();
+void setUserDef(User);
+void setDriverDef(Driver);
+void setTripDef(Trip);
 
 private:
     User Szymonn;
