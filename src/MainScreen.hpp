@@ -20,6 +20,7 @@ private:
     sf::Sprite appName;
     Resources resources;
 
+
 };
 
 
