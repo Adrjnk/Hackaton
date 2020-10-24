@@ -17,9 +17,9 @@ private:
 private:
     User Szymon;
     User Irena;
-    User Michał;
+    User Michal;
 
-    Driver Paweł;
+    Driver Pawel;
     Driver Paulina;
     Driver Maciek;
 

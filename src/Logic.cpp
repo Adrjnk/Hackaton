@@ -17,18 +17,18 @@ void Logic::initUsers() {
     Irena.work_Address ="Szewska";
     setUserDef(Irena);
 
-    Michał.User_Name = "Michał";
-    Michał.home_Address ="Wyspiańskiego";
-    Michał.home_Address ="Kaszubska";
-    setUserDef(Michał);
+    Michal.User_Name = "Michał";
+    Michal.home_Address ="Wyspiańskiego";
+    Michal.home_Address ="Kaszubska";
+    setUserDef(Michal);
 }
 
 void Logic::initDrivers() {
-    Paweł.Driver_Name = "Paweł";
-    Paweł.car = "Passat";
-    Paweł.home_Address ="Oławska";
-    Paweł.home_Address ="Mordor";
-    setDriverDef(Paweł);
+    Pawel.Driver_Name = "Paweł";
+    Pawel.car = "Passat";
+    Pawel.home_Address ="Oławska";
+    Pawel.home_Address ="Mordor";
+    setDriverDef(Pawel);
 
     Paulina.Driver_Name = "Paulina";
     Paulina.car = "Golf";
