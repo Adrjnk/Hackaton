@@ -14,7 +14,7 @@ private:
     sf::Sprite background;
     sf::Sprite takeOffButton;
     sf::Sprite cancelButton;
-    sf::Text text;
+    sf::Text textPawel;
     Resources resources;
 };
 
