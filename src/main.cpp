@@ -1,12 +1,14 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include <string>
+#include <LogicSFML.hpp>
 
 int main(){
     srand( static_cast<unsigned int>(time(nullptr)));
     sf::ContextSettings settings;
     settings.antialiasingLevel = 8;
     sf::RenderWindow win(sf::VideoMode(440, 800), "Drivee",sf::Style::Default ,settings);
+
+    LogicSFML mainLogic;
 
     while (win.isOpen()) {
         sf::Event event;
@@ -15,7 +17,7 @@ int main(){
                 win.close();
             }
         }
-        win.display();
+        win.draw(mainLogic);
         win.clear();
     }
     return 0;
