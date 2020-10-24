@@ -1,6 +1,3 @@
-//
-// Created by Gus on 24.10.2020.
-//
 
 #ifndef DRIVEE_MAINSCREEN_HPP
 #define DRIVEE_MAINSCREEN_HPP
@@ -20,8 +17,6 @@ private:
     sf::Sprite appName;
     Resources resources;
 
-
 };
 
-
-#endif //DRIVEE_MAINSCREEN_HPP
+#endif
