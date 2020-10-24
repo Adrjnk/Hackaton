@@ -9,6 +9,8 @@ public:
     std::string User_Name;
     int navX = 0;
     int navY = 0;
+    std::string home_Address;
+    std::string work_Address;
 };
 
 

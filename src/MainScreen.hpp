@@ -8,7 +8,7 @@ class MainScreen : public sf::Drawable{
 public:
     MainScreen();
     void draw(sf::RenderTarget& target, sf::RenderStates states) const;
-
+    void handleEvent(sf::Event &event,sf::RenderWindow& win);
     ~MainScreen();
 
 private:

@@ -6,18 +6,22 @@
 
 class Logic {
     Logic();
-void setUserDef(User);
-void setDriverDef(Driver);
-void setTripDef(Trip);
-
+~Logic();
 private:
-    User Szymonn;
+    void initUsers();
+    void initDrivers();
+    void initTrips();
+    void setUserDef(User &user);
+    void setDriverDef(Driver &driver);
+    void setTripDef(Trip &trip);
+private:
+    User Szymon;
     User Irena;
-    User Michu;
+    User Michal;
 
-    Driver Szymob;
-    Driver Ireeenka;
-    Driver Garzewawiak;
+    Driver Pawel;
+    Driver Paulina;
+    Driver Maciek;
 
     Trip jeden;
     Trip dwa;

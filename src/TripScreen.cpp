@@ -16,8 +16,14 @@ void TripScreen::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(Text,states);
 }
 
+void TripScreen::handleEvent(sf::Event &event, sf::RenderWindow &win) {
+
+}
+
 TripScreen::~TripScreen() {
 
 }
+
+
 
 
