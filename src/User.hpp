@@ -7,8 +7,8 @@ class User {
 public:
     int Score = 0;
     std::string User_Name;
-    int navX;
-    int navY;
+    int navX = 0;
+    int navY = 0;
 };
 
 
