@@ -1,11 +1,12 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include <string>
 
 int main(){
     srand( static_cast<unsigned int>(time(nullptr)));
     sf::ContextSettings settings;
     settings.antialiasingLevel = 8;
-    sf::RenderWindow win(sf::VideoMode(600, 1000), "Drivee",sf::Style::Default ,settings);
+    sf::RenderWindow win(sf::VideoMode(440, 800), "Drivee",sf::Style::Default ,settings);
 
     while (win.isOpen()) {
         sf::Event event;
