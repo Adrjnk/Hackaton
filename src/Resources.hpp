@@ -10,7 +10,7 @@
 class Resources {
 public:
     Resources(){
-        //initFont();
+        initFont();
         initTextures();
     }
     sf::Font font;
@@ -25,17 +25,17 @@ public:
 
 private:
 
-    /*
+
     void initFont(){
 
         //R"(..\\..\\Resources\\Retro.ttf)" windows
-        if(! font.loadFromFile("../../Resources/Retro.ttf"))
+        if(! font.loadFromFile("../../Resources/OpenSans-Light.ttf"))
         {
             std::cerr << strerror(errno) <<std::endl;
             abort();
         }
     }
-    */
+
 
     void initTextures()
     {
