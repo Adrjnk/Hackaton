@@ -16,8 +16,11 @@ int main(){
             if (event.type == sf::Event::Closed) {
                 win.close();
             }
+            mainLogic.handleEvent(event,win);
         }
+        mainLogic.update();
         win.draw(mainLogic);
+        win.display();
         win.clear();
     }
     return 0;
