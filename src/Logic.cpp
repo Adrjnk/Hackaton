@@ -69,12 +69,14 @@ void Logic::setDriverDef(Driver& user) {
     user.navY = rand() %1500 + 10;
 }
 
+
 void Logic::setTripDef(Trip& trip) {
     trip.distance = rand() %15 + 1;
     trip.count = rand() %3 + 1;
 }
 
 Logic::~Logic() {}
+
 
 
 
