@@ -2,6 +2,7 @@
 #define DRIVEE_DRIVERFOUND_HPP
 
 #include "SFML/Graphics.hpp"
+#include "Resources.hpp"
 
 class DriverFound : public sf::Drawable {
 public:
@@ -10,6 +11,11 @@ public:
     void handleEvent(sf::Event &event,sf::RenderWindow& win);
     ~DriverFound();
 private:
+    sf::Sprite background;
+    sf::Sprite takeOffButton;
+    sf::Sprite cancelButton;
+    sf::Text text;
+    Resources resources;
 };
 
 
