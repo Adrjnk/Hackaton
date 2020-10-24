@@ -18,5 +18,10 @@ void MainScreen::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(buttonPassenger,states);
 
 }
+void MainScreen::handleEvent(sf::Event &event, sf::RenderWindow &win) {
+
+}
 
 MainScreen::~MainScreen() {}
+
+

@@ -6,10 +6,11 @@
 #include "TripScreen.hpp"
 #include "UserScreen.hpp"
 #include "ChooseScreen.hpp"
+#include "DriverFound.hpp"
 
 class LogicSFML: public sf::Drawable{
 public:
-    LogicSFML(MainScreen& mainScreen,ChooseScreen& chooseScreen,TripScreen& tripScreen,UserScreen& userScreen);
+    LogicSFML(MainScreen& mainScreen,ChooseScreen& chooseScreen,TripScreen& tripScreen,UserScreen& userScreen,DriverFound& driverFound);
     void update();
     void draw(sf::RenderTarget &target, sf::RenderStates states)const;
     void handleEvent(sf::Event &event,sf::RenderWindow& win);
@@ -19,6 +20,10 @@ private:
     ChooseScreen& chooseScreen;
     TripScreen& tripScreen;
     UserScreen& userScreen;
+    DriverFound& driverFound;
+
+
+
 
 };
 
