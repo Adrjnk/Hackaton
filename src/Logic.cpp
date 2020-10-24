@@ -12,6 +12,8 @@ Logic::Logic()  {
  Michu.User_Name = "Michał";
  setUserDef(Michu);
 
+
+
  Szymob.Driver_Name = "Szybki i wściekły";
  Szymob.car = "Dniepr";
  setDriverDef(Szymob);
@@ -39,19 +41,19 @@ Logic::Logic()  {
 
 void Logic::setUserDef(User user) {
     user.navX = rand() %1500 + 10;
-    user.Score = rand() %15 + 1;
+    user.Score = rand() %1500 + 10;
     user.navY = rand() %1500 + 10;
 }
 
 void Logic::setDriverDef(Driver user) {
     user.navX = rand() %1500 + 10;
-    user.Score = rand() %15+1;
+    user.Score = rand() %1500 + 10;
     user.navY = rand() %1500 + 10;
 }
 
 void Logic::setTripDef(Trip trip) {
-    trip.distance = rand() %10 + 1;
-    trip.count = rand() %3+1;
+    trip.distance = rand() %1500 + 10;
+    trip.count = rand() %1500 + 10;
 
 
 }
