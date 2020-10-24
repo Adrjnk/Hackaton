@@ -41,19 +41,19 @@ Logic::Logic()  {
 
 void Logic::setUserDef(User user) {
     user.navX = rand() %1500 + 10;
-    user.Score = rand() %1500 + 10;
+    user.Score = rand() %10 + 10;
     user.navY = rand() %1500 + 10;
 }
 
 void Logic::setDriverDef(Driver user) {
     user.navX = rand() %1500 + 10;
-    user.Score = rand() %1500 + 10;
+    user.Score = rand() %10 + 10;
     user.navY = rand() %1500 + 10;
 }
 
 void Logic::setTripDef(Trip trip) {
-    trip.distance = rand() %1500 + 10;
-    trip.count = rand() %1500 + 10;
+    trip.distance = rand() %30 + 1;
+    trip.count = rand() %10 + 1;
 
 
 }
