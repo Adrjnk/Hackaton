@@ -27,4 +27,4 @@ private:
 };
 
 
-#endif //DRIVEE_RESOURCES_HPP
+#endif
