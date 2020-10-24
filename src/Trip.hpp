@@ -6,9 +6,10 @@
 
 class Trip {
 public:
-    std::string from;
-    std::string to;
-    int distance;
+    std::string from="Garzewko";
+    std::string to="Wrocław";
+    int distance=500;
+    int count=30;
     int getPoints() const {
         return points;
     }
