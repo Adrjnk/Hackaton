@@ -52,8 +52,8 @@ void Logic::setDriverDef(Driver user) {
 }
 
 void Logic::setTripDef(Trip trip) {
-    trip.distance = rand() %1500 + 10;
-    trip.count = rand() %1500 + 10;
+    trip.distance = rand() %1 + 10;
+    trip.count = rand() %3+1;
 
 
 }
