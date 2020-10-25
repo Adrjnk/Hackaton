@@ -36,7 +36,7 @@ void LogicSFML::handleEvent(sf::Event &event, sf::RenderWindow &win) {
 }
 void LogicSFML::update(){
 
-    mainOptions="mainScreen";
+    mainOptions="mainScreen"; //tu zmiana opcji menu
 
     if(mainScreen.options==""){
         mainScreen.options="empty";
