@@ -53,9 +53,6 @@ void LogicSFML::update(){
         mainOptions="userScreen";
     }
 
-
-
-
     if(chooseScreen.options=="coś"){
         chooseScreen.options="empty";
     }
@@ -66,18 +63,10 @@ void LogicSFML::update(){
 
 
 
-
-    if(tripScreen.options=="coś"){
+    if(tripScreen.options=="runSearch"){
         tripScreen.options="empty";
+        mainOptions="driverFound";
     }
-
-    else if(tripScreen.options=="runSearch"){
-        tripScreen.options="driverFound";
-    }
-
-
-
-
 
     if(userScreen.options=="coś"){
         userScreen.options="empty";

@@ -19,15 +19,16 @@ void TripScreen::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 
 void TripScreen::handleEvent(sf::Event &event, sf::RenderWindow &win) {
 
-
-    if (event.type == sf::Event::TextEntered){
-        if (event.text.unicode < 128 && event.text.unicode != 10){
+    if (event.type == sf::Event::TextEntered) {
+        if (event.text.unicode < 128 && event.text.unicode != 10) {
             playerInput = playerInput + static_cast<char>(event.text.unicode);
-            Text.setString(playerInput);}
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
-            options="runSearch";
+            Text.setString(playerInput);
+        }
+        if(event.text.unicode==13 || event.text.unicode==10){
+            options = "loading";
+            options = "runSearch";
+        }
     }
-
 }
 
 TripScreen::~TripScreen() {

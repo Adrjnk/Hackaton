@@ -8,6 +8,7 @@
 #include "UserScreen.hpp"
 #include "ChooseScreen.hpp"
 #include "DriverFound.hpp"
+#include "Loading.hpp"
 
 class LogicSFML: public sf::Drawable{
 public:
