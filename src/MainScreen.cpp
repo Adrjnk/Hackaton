@@ -26,14 +26,20 @@ void MainScreen::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(userButton,states);
 
 }
-void MainScreen::handleEvent(sf::Event &event, sf::RenderWindow &win) {
-    auto mouse_pos = sf::Mouse::getPosition(win); // Mouse position relative to the window
-    auto translated_pos = win.mapPixelToCoords(mouse_pos); // Mouse position translated into world coordinates
+void MainScreen::handleEvent(sf::Event &event, sf::RenderWindow &win,sf::Vector2<float> &translated_pos) {
+
+
     if(buttonDriver.getGlobalBounds().contains(translated_pos)){
         buttonDriver.setTexture(resources.textureButtonDriverActive);
-        std::cout<<"siema";
-    } // Rectangle-contains-point check
-    // Mouse is inside the sprite.
+        if(sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+            options="Drive";
+            }
+    }
+    else{
+        buttonDriver.setTexture(resources.textureButtonDriver);
+    }
+
+
 }
 
 MainScreen::~MainScreen() {}

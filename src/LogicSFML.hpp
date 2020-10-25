@@ -22,7 +22,7 @@ private:
     TripScreen& tripScreen;
     UserScreen& userScreen;
     DriverFound& driverFound;
-    std::string mainOptions="empty";
+    std::string mainOptions="mainScreen";
 };
 
 
