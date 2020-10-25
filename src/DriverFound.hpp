@@ -8,7 +8,7 @@ class DriverFound : public sf::Drawable {
 public:
     DriverFound();
     void draw(sf::RenderTarget &target, sf::RenderStates states)const;
-    void handleEvent(sf::Event &event,sf::RenderWindow& win);
+    void handleEvent(sf::Event &event,sf::RenderWindow& win,sf::Vector2<float> &translated_pos);
     std::string options;
     ~DriverFound();
 private:

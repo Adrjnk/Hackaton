@@ -8,7 +8,7 @@ class UserScreen : public sf::Drawable {
 public:
     UserScreen();
     void draw(sf::RenderTarget &target, sf::RenderStates states)const;
-    void handleEvent(sf::Event &event,sf::RenderWindow& win);
+    void handleEvent(sf::Event &event,sf::RenderWindow& win,sf::Vector2<float> &translated_pos);
     std::string options="empty";
     ~UserScreen();
 private:

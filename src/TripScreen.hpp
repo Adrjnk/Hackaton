@@ -11,6 +11,7 @@ public:
     void draw(sf::RenderTarget &target, sf::RenderStates states)const;
     void handleEvent(sf::Event &event,sf::RenderWindow& win);
     std::string options="empty";
+    void screenReset();
     ~TripScreen();
 
 
@@ -20,6 +21,7 @@ private:
     sf::String playerInput;
     sf::Text Text;
     sf::RectangleShape searchLine;
+
 
 };
 

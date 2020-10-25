@@ -22,8 +22,23 @@ target.draw(cancelButton);
 target.draw(textPawel);
 }
 
-void DriverFound::handleEvent(sf::Event &event, sf::RenderWindow &win) {
+void DriverFound::handleEvent(sf::Event &event, sf::RenderWindow &win,sf::Vector2<float> &translated_pos) {
 
+    if(takeOffButton.getGlobalBounds().contains(translated_pos)){
+        takeOffButton.setTexture(resources.textureTakeOffActive);
+    }
+    else{
+        takeOffButton.setTexture(resources.textureTakeOff);
+    }
+    if(cancelButton.getGlobalBounds().contains(translated_pos)){
+        cancelButton.setTexture(resources.textureCancelActive);
+        if(sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+            options="powrót";
+        }
+    }
+    else{
+        cancelButton.setTexture(resources.textureCancel);
+    }
 }
 
 

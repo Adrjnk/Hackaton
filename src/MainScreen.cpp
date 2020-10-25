@@ -50,7 +50,7 @@ void MainScreen::handleEvent(sf::Event &event, sf::RenderWindow &win,sf::Vector2
 
 
     if(userButton.getGlobalBounds().contains(translated_pos)){
-        userButton.setTexture(resources.textureButtonUser);
+        userButton.setTexture(resources.textureButtonUserActive);
         if(sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
             options="User";
         }

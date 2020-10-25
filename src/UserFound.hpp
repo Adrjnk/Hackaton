@@ -1,7 +1,3 @@
-//
-// Created by Gus on 25.10.2020.
-//
-
 #ifndef DRIVEE_USERFOUND_HPP
 #define DRIVEE_USERFOUND_HPP
 
@@ -9,11 +5,11 @@
 #include "Resources.hpp"
 
 
-class UserFound {
+class UserFound :public sf::Drawable {
 public:
     UserFound();
     void draw(sf::RenderTarget &target, sf::RenderStates states)const;
-    void handleEvent(sf::Event &event,sf::RenderWindow& win);
+    void handleEvent(sf::Event &event,sf::RenderWindow& win,sf::Vector2<float> &translated_pos);
     std::string options;
     ~UserFound();
 private:
@@ -25,4 +21,4 @@ private:
 };
 
 
-#endif //DRIVEE_USERFOUND_HPP
+#endif
