@@ -43,12 +43,20 @@ void LogicSFML::update(){
     if(mainScreen.options=="Drive"){
 
         mainScreen.options="empty";
-        mainOptions="driverFound";
+        mainOptions="tripScreen";
     }
 
-    else if(mainScreen.options=="coś"){
+    else if(mainScreen.options=="Passenger"){
         mainScreen.options="empty";
+        mainOptions="tripScreen";
     }
+    else if(mainScreen.options=="User"){
+        mainScreen.options="empty";
+        mainOptions="userScreen";
+    }
+
+
+
 
     if(chooseScreen.options=="coś"){
         chooseScreen.options="empty";
@@ -58,13 +66,20 @@ void LogicSFML::update(){
         chooseScreen.options="empty";
     }
 
+
+
+
     if(tripScreen.options=="coś"){
         tripScreen.options="empty";
     }
 
-    else if(tripScreen.options=="coś"){
-        tripScreen.options="empty";
+    else if(tripScreen.options=="runSearch"){
+        tripScreen.options="driverFound";
     }
+
+
+
+
 
     if(userScreen.options=="coś"){
         userScreen.options="empty";
