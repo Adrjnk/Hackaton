@@ -15,6 +15,8 @@ private:
     sf::Sprite buttonDriver;
     sf::Sprite buttonPassenger;
     sf::Sprite appName;
+    sf::Sprite map;
+    sf::Sprite userButton;
     Resources resources;
 
 };

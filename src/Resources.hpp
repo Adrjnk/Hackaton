@@ -22,6 +22,8 @@ public:
     sf::Texture textureTakeOff;
     sf::Texture textureCancel;
     sf::Texture textureCarsBackground;
+    sf::Texture textureMap;
+    sf::Texture textureButtonUser;
 
 private:
 
@@ -45,7 +47,7 @@ private:
             abort();
         }
         if(!textureTakeOff.loadFromFile("../../Resources/zabierzsie-button.png") || !textureCancel.loadFromFile("../../Resources/anuluj-button.png")
-        || !textureCarsBackground.loadFromFile("../../Resources/pawel-tlo-auta.png"))
+        || !textureCarsBackground.loadFromFile("../../Resources/pawel-tlo-auta.png") || !textureMap.loadFromFile("../../Resources/mapa.png") || !textureButtonUser.loadFromFile("../../Resources/user-button.png"))
         {
             std::cerr << strerror(errno) <<std::endl;
             abort();

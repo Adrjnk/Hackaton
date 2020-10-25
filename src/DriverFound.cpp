@@ -8,9 +8,9 @@ takeOffButton.setPosition(15,390);
 cancelButton.setTexture(resources.textureCancel);
 cancelButton.setPosition(225,395);
 textPawel.setFont(resources.font);
-textPawel.setPosition(40,55);
+textPawel.setPosition(60,55);
 textPawel.setCharacterSize(35);
-textPawel.setString("Paweł znajduje się \n 200m od Ciebie i \n kończy podróż w \n pobliżu Twojej \n docelowej lokalizacji.");
+textPawel.setString(L"Paweł znajduje się \n 200m od Ciebie i \n kończy podróż w \n pobliżu Twojej \n docelowej lokalizacji.");
 textPawel.setFillColor(sf::Color(0,0,0));
 
 
