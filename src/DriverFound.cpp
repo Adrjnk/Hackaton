@@ -7,6 +7,8 @@ takeOffButton.setTexture(resources.textureTakeOff);
 takeOffButton.setPosition(15,390);
 cancelButton.setTexture(resources.textureCancel);
 cancelButton.setPosition(225,395);
+
+
 }
 
 
