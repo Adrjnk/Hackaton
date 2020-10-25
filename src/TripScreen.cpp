@@ -21,9 +21,13 @@ void TripScreen::handleEvent(sf::Event &event, sf::RenderWindow &win) {
 
 
     if (event.type == sf::Event::TextEntered){
-        if (event.text.unicode < 128){
+        if (event.text.unicode < 128 && event.text.unicode != 10){
             playerInput = playerInput + static_cast<char>(event.text.unicode);
-            Text.setString(playerInput);}}
+            Text.setString(playerInput);}
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
+            options="runSearch";
+    }
+
 }
 
 TripScreen::~TripScreen() {

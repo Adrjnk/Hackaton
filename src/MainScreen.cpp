@@ -40,6 +40,28 @@ void MainScreen::handleEvent(sf::Event &event, sf::RenderWindow &win,sf::Vector2
     }
 
 
+    if(buttonPassenger.getGlobalBounds().contains(translated_pos)){
+        buttonPassenger.setTexture(resources.textureButtonPassengerActive);
+        if(sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+            options="Passenger";
+        }
+    }
+    else{
+        buttonPassenger.setTexture(resources.textureButtonPassenger);
+    }
+
+
+    if(userButton.getGlobalBounds().contains(translated_pos)){
+        userButton.setTexture(resources.textureButtonUser);
+        if(sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+            options="User";
+        }
+    }
+    else{
+        userButton.setTexture(resources.textureButtonUser);
+    }
+
+
 }
 
 MainScreen::~MainScreen() {}
