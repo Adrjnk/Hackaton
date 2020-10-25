@@ -24,6 +24,9 @@ public:
     sf::Texture textureCarsBackground;
     sf::Texture textureMap;
     sf::Texture textureButtonUser;
+    sf::Texture textureHomeIcon;
+    sf::Texture textureWorkIcon;
+    sf::Texture textureButtonBack;
 
 private:
 
@@ -48,6 +51,11 @@ private:
         }
         if(!textureTakeOff.loadFromFile("../../Resources/zabierzsie-button.png") || !textureCancel.loadFromFile("../../Resources/anuluj-button.png")
         || !textureCarsBackground.loadFromFile("../../Resources/pawel-tlo-auta.png") || !textureMap.loadFromFile("../../Resources/mapa.png") || !textureButtonUser.loadFromFile("../../Resources/user-button.png"))
+        {
+            std::cerr << strerror(errno) <<std::endl;
+            abort();
+        }
+        if(!textureHomeIcon.loadFromFile("../../Resources/home-icon.png") || !textureWorkIcon.loadFromFile("../../Resources/work-icon.png") || !textureButtonBack.loadFromFile("../../Resources/powrot-button.png"))
         {
             std::cerr << strerror(errno) <<std::endl;
             abort();

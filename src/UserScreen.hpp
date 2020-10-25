@@ -11,6 +11,16 @@ public:
     void handleEvent(sf::Event &event,sf::RenderWindow& win);
     std::string options="empty";
     ~UserScreen();
+private:
+    sf::Sprite homeIcon;
+    sf::Sprite workIcon;
+    sf::Sprite backButton;
+    Resources resources;
+    sf::Text textUsername;
+    sf::Text textPoints;
+    sf::Text textCO2;
+    sf::Text textRoads;
+    sf::Text textDestinations;
 };
 
 

@@ -29,7 +29,7 @@ int main(){
         mainLogic.update();
         win.draw(mainLogic);
         win.display();
-        win.clear();
+        win.clear(sf::Color::White);
     }
     return 0;
 }
