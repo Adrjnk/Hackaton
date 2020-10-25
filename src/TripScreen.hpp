@@ -3,6 +3,7 @@
 
 #include "SFML/Graphics.hpp"
 #include "Resources.hpp"
+#include "vector"
 
 class TripScreen : public sf::Drawable{
 public:
