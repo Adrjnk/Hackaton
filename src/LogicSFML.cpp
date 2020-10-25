@@ -39,45 +39,44 @@ void LogicSFML::handleEvent(sf::Event &event, sf::RenderWindow &win) {
 }
 void LogicSFML::update(){
 
-    mainOptions="driverFound";
+    if(mainScreen.options=="Drive"){
+        mainScreen.options="empty";
+        mainOptions="driverFound";
+    }
 
-    if(mainScreen.options==""){
+    else if(mainScreen.options=="coś"){
         mainScreen.options="empty";
     }
 
-    else if(mainScreen.options==""){
-        mainScreen.options="empty";
-    }
-
-    if(chooseScreen.options==""){
+    if(chooseScreen.options=="coś"){
         chooseScreen.options="empty";
     }
 
-    else if(chooseScreen.options==""){
+    else if(chooseScreen.options=="coś"){
         chooseScreen.options="empty";
     }
 
-    if(tripScreen.options==""){
+    if(tripScreen.options=="coś"){
         tripScreen.options="empty";
     }
 
-    else if(tripScreen.options==""){
+    else if(tripScreen.options=="coś"){
         tripScreen.options="empty";
     }
 
-    if(userScreen.options==""){
+    if(userScreen.options=="coś"){
         userScreen.options="empty";
     }
 
-    else if(userScreen.options==""){
+    else if(userScreen.options=="coś"){
         userScreen.options="empty";
     }
 
-    if(driverFound.options==""){
+    if(driverFound.options=="coś"){
         driverFound.options="empty";
     }
 
-    else if(driverFound.options==""){
+    else if(driverFound.options=="coś"){
         driverFound.options="empty";
     }
 

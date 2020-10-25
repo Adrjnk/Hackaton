@@ -20,11 +20,18 @@ void MainScreen::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 }
 void MainScreen::handleEvent(sf::Event &event, sf::RenderWindow &win,sf::Vector2<float> &translated_pos) {
 
+
     if(buttonDriver.getGlobalBounds().contains(translated_pos)){
         buttonDriver.setTexture(resources.textureButtonDriverActive);
-       if(sf::Mouse().isButtonPressed(sf::Mouse::Left))
-           options="Drive";
+        if(sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+            options="Drive";
+            }
     }
+    else{
+        buttonDriver.setTexture(resources.textureButtonDriver);
+    }
+
+
 }
 
 MainScreen::~MainScreen() {}
