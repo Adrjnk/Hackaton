@@ -19,6 +19,7 @@ private:
     sf::Text whereToGo;
     sf::String playerInput;
     sf::Text Text;
+    sf::RectangleShape searchLine;
 
 };
 

@@ -1,14 +1,20 @@
 #include "TripScreen.hpp"
 
 TripScreen::TripScreen() {
+    searchLine.setFillColor(sf::Color(192, 192, 192));
+
+
     whereToGo.setFont(resources.font);
     whereToGo.setString(L"  Dokąd\n  chcesz\n  jechać?");
     whereToGo.setCharacterSize(70);
-    whereToGo.setPosition(90,56);
+    whereToGo.setPosition(75,56);
+    whereToGo.setFillColor(sf::Color::Black);
 
     Text.setFont(resources.font);
     Text.setCharacterSize(35);
     Text.setPosition(70,500);
+    Text.setFillColor(sf::Color::Black);
+
 
 }
 
