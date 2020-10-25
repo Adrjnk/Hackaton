@@ -23,6 +23,7 @@ void MainScreen::handleEvent(sf::Event &event, sf::RenderWindow &win) {
     auto translated_pos = win.mapPixelToCoords(mouse_pos); // Mouse position translated into world coordinates
     if(buttonDriver.getGlobalBounds().contains(translated_pos)){
         buttonDriver.setTexture(resources.textureButtonDriverActive);
+        std::cout<<"siema";
     } // Rectangle-contains-point check
     // Mouse is inside the sprite.
 }
