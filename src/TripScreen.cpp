@@ -3,7 +3,6 @@
 TripScreen::TripScreen() {
     searchLine.setFillColor(sf::Color(192, 192, 192));
 
-
     whereToGo.setFont(resources.font);
     whereToGo.setString(L"  Dokąd\n  chcesz\n  jechać?");
     whereToGo.setCharacterSize(70);
@@ -14,7 +13,6 @@ TripScreen::TripScreen() {
     Text.setCharacterSize(35);
     Text.setPosition(70,500);
     Text.setFillColor(sf::Color::Black);
-
 
 }
 
@@ -35,6 +33,11 @@ void TripScreen::handleEvent(sf::Event &event, sf::RenderWindow &win) {
             options = "runSearch";
         }
     }
+}
+void TripScreen::screenReset(){
+
+    Text.setString("");
+    playerInput="";
 }
 
 TripScreen::~TripScreen() {

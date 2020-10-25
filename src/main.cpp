@@ -14,9 +14,10 @@ int main(){
     TripScreen tripScreen;
     UserScreen userScreen;
     DriverFound driverFound;
+    UserFound userFound;
     Loading loading;
 
-    LogicSFML mainLogic(mainScreen,tripScreen,userScreen,driverFound,loading);
+    LogicSFML mainLogic(mainScreen,tripScreen,userScreen,driverFound,userFound,loading);
 
     while (win.isOpen()) {
         sf::Event event;

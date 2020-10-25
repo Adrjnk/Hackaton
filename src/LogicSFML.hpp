@@ -7,21 +7,24 @@
 #include "TripScreen.hpp"
 #include "UserScreen.hpp"
 #include "DriverFound.hpp"
+#include "UserFound.hpp"
 #include "Loading.hpp"
 
 class LogicSFML: public sf::Drawable{
 public:
     LogicSFML(MainScreen& mainScreen,TripScreen& tripScreen,UserScreen& userScreen
-              ,DriverFound& driverFound,Loading& loading);
+              ,DriverFound& driverFound,UserFound &userFound,Loading& loading);
     void update();
     void draw(sf::RenderTarget &target, sf::RenderStates states)const;
     void handleEvent(sf::Event &event,sf::RenderWindow& win);
     ~LogicSFML();
 private:
     int bolt=0;
+    std::string driverOrPassenger="empty";
     MainScreen& mainScreen;
     TripScreen& tripScreen;
     UserScreen& userScreen;
+    UserFound& userFound;
     DriverFound& driverFound;
     Loading& loading;
     std::string mainOptions="mainScreen";

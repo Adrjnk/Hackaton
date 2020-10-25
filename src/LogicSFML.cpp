@@ -1,9 +1,9 @@
 #include "LogicSFML.hpp"
 
 LogicSFML::LogicSFML(MainScreen &mainScreen,TripScreen &tripScreen,UserScreen &userScreen,
-                     DriverFound& driverFound,Loading& loading)
+                     DriverFound& driverFound,UserFound &userFound,Loading& loading)
                      :mainScreen(mainScreen),tripScreen(tripScreen)
-                     ,userScreen(userScreen),driverFound(driverFound),loading(loading)
+                     ,userScreen(userScreen),userFound(userFound),driverFound(driverFound),loading(loading)
 
                      {}
 
@@ -17,6 +17,8 @@ void LogicSFML::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(userScreen,states);
     else if(mainOptions=="driverFound")
         target.draw(driverFound, states);
+    else if(mainOptions=="userFound")
+        target.draw(userFound, states);
     else if(mainOptions=="loading")
         target.draw(loading, states);
     if(bolt==8){
@@ -33,23 +35,25 @@ void LogicSFML::handleEvent(sf::Event &event, sf::RenderWindow &win) {
     else if(mainOptions=="tripScreen")
     tripScreen.handleEvent(event,win);
     else if(mainOptions=="userScreen")
-    userScreen.handleEvent(event,win);
+    userScreen.handleEvent(event,win,translated_pos);
     else if(mainOptions=="driverFound")
-    driverFound.handleEvent(event,win);
+    driverFound.handleEvent(event,win,translated_pos);
+    else if(mainOptions=="userFound")
+        userFound.handleEvent(event,win,translated_pos);
 
 }
 void LogicSFML::update(){
-    mainOptions="mainScreen"; 
-    if(mainScreen.options==""){
-    if(mainScreen.options=="Drive"){
 
+    if(mainScreen.options=="Drive"){
         mainScreen.options="empty";
+        driverOrPassenger="driver";
         mainOptions="tripScreen";
     }
 
     else if(mainScreen.options=="Passenger"){
         mainScreen.options="empty";
         mainOptions="tripScreen";
+        driverOrPassenger="passenger";
     }
     else if(mainScreen.options=="User"){
         mainScreen.options="empty";
@@ -60,13 +64,18 @@ void LogicSFML::update(){
         mainOptions="loading";
         tripScreen.options="empty";
         loading.options="found";
+        tripScreen.screenReset();
     }
 
     if(loading.options=="found"){
         bolt++;
         if(bolt>8) {
             loading.options = "empty";
+            if(driverOrPassenger=="passenger")
             mainOptions = "driverFound";
+            if(driverOrPassenger=="driver")
+                mainOptions = "userFound";
+            bolt=0;
         }
     }
 
@@ -75,12 +84,17 @@ void LogicSFML::update(){
         mainOptions="mainScreen";
     }
 
-    else if(driverFound.options=="coś"){
+    else if(driverFound.options=="powrót"){
         driverFound.options="empty";
+        mainOptions="mainScreen";
+    }
+
+    else if(userFound.options=="powrót"){
+        userFound.options="empty";
+        mainOptions="mainScreen";
     }
 
 }
-
 
 LogicSFML::~LogicSFML() noexcept {}
 

@@ -14,7 +14,7 @@ textUsername.setFont(resources.font);
 textUsername.setCharacterSize(65);
 textUsername.setFillColor(sf::Color::Black);
 textUsername.setPosition(115,50);
-textUsername.setString(L"Paweł ");
+textUsername.setString(L"Michał ");
 
     textPoints.setFont(resources.font);
     textPoints.setCharacterSize(40);
@@ -48,8 +48,17 @@ target.draw(textRoads);
 target.draw(textDestinations);
 }
 
-void UserScreen::handleEvent(sf::Event &event, sf::RenderWindow &win) {
+void UserScreen::handleEvent(sf::Event &event, sf::RenderWindow &win,sf::Vector2<float> &translated_pos) {
 
+    if(backButton.getGlobalBounds().contains(translated_pos)){
+        backButton.setTexture(resources.textureButtonBackActive);
+        if(sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+            options="powrót";
+        }
+    }
+    else{
+        backButton.setTexture(resources.textureButtonBack);
+    }
 }
 
 UserScreen::~UserScreen() {
