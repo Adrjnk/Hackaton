@@ -5,8 +5,10 @@
 #include "Driver.hpp"
 
 class Logic {
+public:
     Logic();
 ~Logic();
+
 private:
     void initUsers();
     void initDrivers();
@@ -14,7 +16,7 @@ private:
     void setUserDef(User &user);
     void setDriverDef(Driver &driver);
     void setTripDef(Trip &trip);
-private:
+
     User Szymon;
     User Irena;
     User Michal;

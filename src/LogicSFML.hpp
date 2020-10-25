@@ -2,6 +2,7 @@
 #define DRIVEE_LOGICSFML_HPP
 
 #include "SFML/Graphics.hpp"
+#include "Logic.hpp"
 #include "MainScreen.hpp"
 #include "TripScreen.hpp"
 #include "UserScreen.hpp"
@@ -21,10 +22,7 @@ private:
     TripScreen& tripScreen;
     UserScreen& userScreen;
     DriverFound& driverFound;
-
-
-
-
+    std::string mainOptions="empty";
 };
 
 

@@ -9,24 +9,74 @@ LogicSFML::LogicSFML(MainScreen &mainScreen, ChooseScreen &chooseScreen,
 
 void LogicSFML::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 
-    //target.draw(mainScreen,states);
-    //target.draw(chooseScreen,states);
-    //target.draw(tripScreen,states);
-    //target.draw(userScreen,states);
+    if(mainOptions=="mainScreen")
+    target.draw(mainScreen,states);
+    else if(mainOptions=="chooseScreen")
+    target.draw(chooseScreen,states);
+    else if(mainOptions=="tripScreen")
+    target.draw(tripScreen,states);
+    else if(mainOptions=="userScreen")
+    target.draw(userScreen,states);
+    else if(mainOptions=="driverFound")
     target.draw(driverFound,states);
-
 }
 void LogicSFML::handleEvent(sf::Event &event, sf::RenderWindow &win) {
 
-    //mainScreen.handleEvent(event,win);
-    //chooseScreen.handleEvent(event,win);
-    //tripScreen.handleEvent(event,win);
-    //userScreen.handleEvent(event,win);
+    if(mainOptions=="mainScreen")
+    mainScreen.handleEvent(event,win);
+    else if(mainOptions=="chooseScreen")
+    chooseScreen.handleEvent(event,win);
+    else if(mainOptions=="tripScreen")
+    tripScreen.handleEvent(event,win);
+    else if(mainOptions=="userScreen")
+    userScreen.handleEvent(event,win);
+    else if(mainOptions=="driverFound")
     driverFound.handleEvent(event,win);
 
 }
 void LogicSFML::update(){
 
+    mainOptions="mainScreen";
+
+    if(mainScreen.options==""){
+        mainScreen.options="empty";
+    }
+
+    else if(mainScreen.options==""){
+        mainScreen.options="empty";
+    }
+
+    if(chooseScreen.options==""){
+        chooseScreen.options="empty";
+    }
+
+    else if(chooseScreen.options==""){
+        chooseScreen.options="empty";
+    }
+
+    if(tripScreen.options==""){
+        tripScreen.options="empty";
+    }
+
+    else if(tripScreen.options==""){
+        tripScreen.options="empty";
+    }
+
+    if(userScreen.options==""){
+        userScreen.options="empty";
+    }
+
+    else if(userScreen.options==""){
+        userScreen.options="empty";
+    }
+
+    if(driverFound.options==""){
+        driverFound.options="empty";
+    }
+
+    else if(driverFound.options==""){
+        driverFound.options="empty";
+    }
 
 }
 

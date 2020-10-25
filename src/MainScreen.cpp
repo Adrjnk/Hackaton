@@ -19,7 +19,13 @@ void MainScreen::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 
 }
 void MainScreen::handleEvent(sf::Event &event, sf::RenderWindow &win) {
-
+    auto mouse_pos = sf::Mouse::getPosition(win); // Mouse position relative to the window
+    auto translated_pos = win.mapPixelToCoords(mouse_pos); // Mouse position translated into world coordinates
+    if(buttonDriver.getGlobalBounds().contains(translated_pos)){
+        buttonDriver.setTexture(resources.textureButtonDriverActive);
+        std::cout<<"siema";
+    } // Rectangle-contains-point check
+    // Mouse is inside the sprite.
 }
 
 MainScreen::~MainScreen() {}

@@ -9,6 +9,7 @@ public:
     TripScreen();
     void draw(sf::RenderTarget &target, sf::RenderStates states)const;
     void handleEvent(sf::Event &event,sf::RenderWindow& win);
+    std::string options="empty";
     ~TripScreen();
 
 

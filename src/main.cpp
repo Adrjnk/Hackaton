@@ -8,6 +8,8 @@ int main(){
     settings.antialiasingLevel = 8;
     sf::RenderWindow win(sf::VideoMode(440, 800), "Drivee",sf::Style::Default ,settings);
 
+    Logic logic;
+
     MainScreen mainScreen;
     ChooseScreen chooseScreen;
     TripScreen tripScreen;
