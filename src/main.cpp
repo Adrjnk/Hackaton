@@ -11,12 +11,12 @@ int main(){
     Logic logic;
 
     MainScreen mainScreen;
-    ChooseScreen chooseScreen;
     TripScreen tripScreen;
     UserScreen userScreen;
     DriverFound driverFound;
+    Loading loading;
 
-    LogicSFML mainLogic(mainScreen,chooseScreen,tripScreen,userScreen,driverFound);
+    LogicSFML mainLogic(mainScreen,tripScreen,userScreen,driverFound,loading);
 
     while (win.isOpen()) {
         sf::Event event;

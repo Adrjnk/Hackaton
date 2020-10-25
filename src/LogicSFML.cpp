@@ -1,9 +1,9 @@
 #include "LogicSFML.hpp"
 
-LogicSFML::LogicSFML(MainScreen &mainScreen, ChooseScreen &chooseScreen,
-                     TripScreen &tripScreen,UserScreen &userScreen,DriverFound& driverFound)
-                     :mainScreen(mainScreen),chooseScreen(chooseScreen),tripScreen(tripScreen)
-                     ,userScreen(userScreen),driverFound(driverFound)
+LogicSFML::LogicSFML(MainScreen &mainScreen,TripScreen &tripScreen,UserScreen &userScreen,
+                     DriverFound& driverFound,Loading& loading)
+                     :mainScreen(mainScreen),tripScreen(tripScreen)
+                     ,userScreen(userScreen),driverFound(driverFound),loading(loading)
 
                      {}
 
@@ -11,14 +11,17 @@ void LogicSFML::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 
     if(mainOptions=="mainScreen")
     target.draw(mainScreen,states);
-    else if(mainOptions=="chooseScreen")
-    target.draw(chooseScreen,states);
     else if(mainOptions=="tripScreen")
     target.draw(tripScreen,states);
     else if(mainOptions=="userScreen")
     target.draw(userScreen,states);
     else if(mainOptions=="driverFound")
-    target.draw(driverFound,states);
+        target.draw(driverFound, states);
+    else if(mainOptions=="loading")
+        target.draw(loading, states);
+    if(bolt==8){
+        sf::sleep(sf::seconds(3));
+    }
 }
 void LogicSFML::handleEvent(sf::Event &event, sf::RenderWindow &win) {
 
@@ -27,8 +30,6 @@ void LogicSFML::handleEvent(sf::Event &event, sf::RenderWindow &win) {
 
     if(mainOptions=="mainScreen")
     mainScreen.handleEvent(event,win,translated_pos);
-    else if(mainOptions=="chooseScreen")
-    chooseScreen.handleEvent(event,win);
     else if(mainOptions=="tripScreen")
     tripScreen.handleEvent(event,win);
     else if(mainOptions=="userScreen")
@@ -53,31 +54,23 @@ void LogicSFML::update(){
         mainOptions="userScreen";
     }
 
-    if(chooseScreen.options=="coś"){
-        chooseScreen.options="empty";
-    }
-
-    else if(chooseScreen.options=="coś"){
-        chooseScreen.options="empty";
-    }
-
-
-
     if(tripScreen.options=="runSearch"){
+        mainOptions="loading";
         tripScreen.options="empty";
-        mainOptions="driverFound";
+        loading.options="found";
     }
 
-    if(userScreen.options=="coś"){
+    if(loading.options=="found"){
+        bolt++;
+        if(bolt>8) {
+            loading.options = "empty";
+            mainOptions = "driverFound";
+        }
+    }
+
+    if(userScreen.options=="powrót"){
         userScreen.options="empty";
-    }
-
-    else if(userScreen.options=="coś"){
-        userScreen.options="empty";
-    }
-
-    if(driverFound.options=="coś"){
-        driverFound.options="empty";
+        mainOptions="mainScreen";
     }
 
     else if(driverFound.options=="coś"){
