@@ -22,8 +22,11 @@ void LogicSFML::draw(sf::RenderTarget &target, sf::RenderStates states) const {
 }
 void LogicSFML::handleEvent(sf::Event &event, sf::RenderWindow &win) {
 
+    auto mouse_pos = sf::Mouse::getPosition(win);
+    auto translated_pos = win.mapPixelToCoords(mouse_pos);
+
     if(mainOptions=="mainScreen")
-    mainScreen.handleEvent(event,win);
+    mainScreen.handleEvent(event,win,translated_pos);
     else if(mainOptions=="chooseScreen")
     chooseScreen.handleEvent(event,win);
     else if(mainOptions=="tripScreen")
@@ -36,7 +39,7 @@ void LogicSFML::handleEvent(sf::Event &event, sf::RenderWindow &win) {
 }
 void LogicSFML::update(){
 
-    mainOptions="mainScreen";
+    mainOptions="driverFound";
 
     if(mainScreen.options==""){
         mainScreen.options="empty";
