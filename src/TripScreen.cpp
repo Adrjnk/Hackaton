@@ -2,13 +2,13 @@
 
 TripScreen::TripScreen() {
     whereToGo.setFont(resources.font);
-    whereToGo.setString("Dokąd\n chcesz\n jechać?");
+    whereToGo.setString(L"  Dokąd\n  chcesz\n  jechać?");
     whereToGo.setCharacterSize(70);
     whereToGo.setPosition(90,56);
 
     Text.setFont(resources.font);
     Text.setCharacterSize(35);
-    Text.setPosition(140,500);
+    Text.setPosition(70,500);
 
 }
 
