@@ -38,8 +38,10 @@ void LogicSFML::handleEvent(sf::Event &event, sf::RenderWindow &win) {
 
 }
 void LogicSFML::update(){
-
+    mainOptions="mainScreen"; 
+    if(mainScreen.options==""){
     if(mainScreen.options=="Drive"){
+
         mainScreen.options="empty";
         mainOptions="driverFound";
     }

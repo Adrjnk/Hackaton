@@ -6,15 +6,13 @@ MainScreen::MainScreen()
     buttonDriver.setTexture(resources.textureButtonDriver);
     buttonPassenger.setTexture(resources.textureButtonPassenger);
     appName.setTexture(resources.textureAppName);
-    buttonDriver.setPosition(220,620);
+    buttonDriver.setPosition(230,626);
     buttonPassenger.setPosition(18,626);
-    appName.setPosition(40,24);
+    appName.setPosition(20,74);
     map.setTexture(resources.textureMap);
     map.setPosition(0,0);
     userButton.setTexture(resources.textureButtonUser);
-    userButton.setPosition(337,22);
-
-
+    userButton.setPosition(337,10);
 
 }
 

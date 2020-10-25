@@ -6,7 +6,7 @@ background.setPosition(0,0);
 takeOffButton.setTexture(resources.textureTakeOff);
 takeOffButton.setPosition(15,390);
 cancelButton.setTexture(resources.textureCancel);
-cancelButton.setPosition(225,395);
+cancelButton.setPosition(225,390);
 textPawel.setFont(resources.font);
 textPawel.setPosition(60,55);
 textPawel.setCharacterSize(35);
